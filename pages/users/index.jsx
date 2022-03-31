@@ -25,14 +25,14 @@ function Index() {
 
     return (
         <Layout>
-            <h1>Users</h1>
-            <Link href="/users/add" className="btn btn-sm btn-success mb-2">Add User</Link>
+            <h1>Companies</h1>
+            <Link href="/users/add" className="btn btn-sm btn-success mb-2">Add Companies</Link>
             <table className="table table-striped">
                 <thead>
                     <tr>
-                        <th style={{ width: '30%' }}>First Name</th>
-                        <th style={{ width: '30%' }}>Last Name</th>
-                        <th style={{ width: '30%' }}>Username</th>
+                        <th style={{ width: '30%' }}>Company Name</th>
+                        <th style={{ width: '30%' }}>Company Website</th>
+                        <th style={{ width: '30%' }}>Company Email</th>
                         <th style={{ width: '10%' }}></th>
                     </tr>
                 </thead>
@@ -40,7 +40,7 @@ function Index() {
                     {users && users.map(user =>
                         <tr key={user.id}>
                             <td>{user.firstName}</td>
-                            <td>{user.lastName}</td>
+                            <td><a href={user.lastName} target="_blank">Website</a></td>
                             <td>{user.username}</td>
                             <td style={{ whiteSpace: 'nowrap' }}>
                                 <Link href={`/users/edit/${user.id}`} className="btn btn-sm btn-primary mr-1">Edit</Link>

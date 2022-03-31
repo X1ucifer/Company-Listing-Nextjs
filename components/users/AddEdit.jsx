@@ -65,19 +65,19 @@ function AddEdit(props) {
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-row">
                 <div className="form-group col">
-                    <label>First Name</label>
+                    <label>Company Name</label>
                     <input name="firstName" type="text" {...register('firstName')} className={`form-control ${errors.firstName ? 'is-invalid' : ''}`} />
                     <div className="invalid-feedback">{errors.firstName?.message}</div>
                 </div>
                 <div className="form-group col">
-                    <label>Last Name</label>
+                    <label>Company Website</label>
                     <input name="lastName" type="text" {...register('lastName')} className={`form-control ${errors.lastName ? 'is-invalid' : ''}`} />
                     <div className="invalid-feedback">{errors.lastName?.message}</div>
                 </div>
             </div>
             <div className="form-row">
                 <div className="form-group col">
-                    <label>Username</label>
+                    <label>Email</label>
                     <input name="username" type="text" {...register('username')} className={`form-control ${errors.username ? 'is-invalid' : ''}`} />
                     <div className="invalid-feedback">{errors.email?.message}</div>
                 </div>
